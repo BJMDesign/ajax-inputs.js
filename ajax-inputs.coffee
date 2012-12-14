@@ -31,9 +31,7 @@ class AjaxInputs
 		@$el = $(el)
 		@options = $.extend {}, defaults, @options
 		@$el.on @options.events, @options.selector, $.proxy @onChange, @
-		# @$el.find(@options.selector).on(@options.events, $.proxy(@onChange, @))
 	onChange: (e)->
-		console.log('onChange');
 		$input = $(e.target)
 		data = $.extend {}, @options.data
 		data[$input.attr 'name'] = $input.val()

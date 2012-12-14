@@ -51,7 +51,6 @@
     AjaxInputs.prototype.onChange = function(e) {
       var $input, data,
         _this = this;
-      console.log('onChange');
       $input = $(e.target);
       data = $.extend({}, this.options.data);
       data[$input.attr('name')] = $input.val();
